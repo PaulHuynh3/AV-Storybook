@@ -24,6 +24,9 @@
                         <subviews>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VyQ-0s-1ay">
                                 <rect key="frame" x="51" y="293" width="242" height="174"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8VD-48-pRR" appends="YES" id="40q-9J-WJA"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECE-wO-fUm">
                                 <rect key="frame" x="144" y="255" width="54" height="30"/>
@@ -63,7 +66,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiU-D8-7Pe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="8VD-48-pRR">
                     <connections>
-                        <action selector="userTap:" destination="Nea-pT-Won" id="R96-rJ-zpI"/>
+                        <action selector="playAudioTap:" destination="Nea-pT-Won" id="Zoz-wE-IjU"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
