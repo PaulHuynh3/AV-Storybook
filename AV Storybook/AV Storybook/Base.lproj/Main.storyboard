@@ -1,26 +1,73 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nea-pT-Won">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Story Part View Controller-->
+        <scene sceneID="Y7b-9v-pFB">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="Nea-pT-Won" customClass="StoryPartViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="LFN-Ny-aNH"/>
+                        <viewControllerLayoutGuide type="bottom" id="EG7-Ap-p8E"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="SUh-mq-83Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VyQ-0s-1ay">
+                                <rect key="frame" x="51" y="293" width="242" height="174"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECE-wO-fUm">
+                                <rect key="frame" x="144" y="255" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="camera:" destination="Nea-pT-Won" eventType="touchUpInside" id="VRX-eG-XTC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4h-ef-XMh">
+                                <rect key="frame" x="130" y="217" width="82" height="30"/>
+                                <state key="normal" title="Microphone"/>
+                                <connections>
+                                    <action selector="toggleMicrophone:" destination="Nea-pT-Won" eventType="touchUpInside" id="etI-oE-JIY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="VyQ-0s-1ay" firstAttribute="top" secondItem="ECE-wO-fUm" secondAttribute="bottom" constant="8" id="7Jk-gx-fq8"/>
+                            <constraint firstItem="F4h-ef-XMh" firstAttribute="top" secondItem="LFN-Ny-aNH" secondAttribute="bottom" constant="197" id="MIf-6V-fgb"/>
+                            <constraint firstItem="VyQ-0s-1ay" firstAttribute="leading" secondItem="SUh-mq-83Q" secondAttribute="leadingMargin" constant="35" id="ZVl-uQ-bW3"/>
+                            <constraint firstItem="ECE-wO-fUm" firstAttribute="centerX" secondItem="F4h-ef-XMh" secondAttribute="centerX" id="bCS-Ni-HMH"/>
+                            <constraint firstItem="VyQ-0s-1ay" firstAttribute="height" secondItem="SUh-mq-83Q" secondAttribute="height" constant="-493" id="elW-bi-TLu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VyQ-0s-1ay" secondAttribute="trailing" constant="66" id="l0u-i7-Si8"/>
+                            <constraint firstItem="F4h-ef-XMh" firstAttribute="leading" secondItem="SUh-mq-83Q" secondAttribute="leadingMargin" constant="114" id="ocM-qz-5CE"/>
+                            <constraint firstItem="ECE-wO-fUm" firstAttribute="top" secondItem="F4h-ef-XMh" secondAttribute="bottom" constant="8" symbolic="YES" id="qye-cu-wAm"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8VD-48-pRR" appends="YES" id="ibT-Hp-3hw"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="VyQ-0s-1ay" id="1P7-WX-LTh"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iiU-D8-7Pe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8VD-48-pRR">
+                    <connections>
+                        <action selector="userTap:" destination="Nea-pT-Won" id="R96-rJ-zpI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="357.60000000000002" y="134.48275862068968"/>
         </scene>
     </scenes>
 </document>
