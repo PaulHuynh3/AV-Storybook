@@ -42,9 +42,7 @@
     [sender setTitle:@"Stop" forState:UIControlStateNormal];
     
     NSError *err = nil;
-    self.recorder = [[AVAudioRecorder alloc]initWithURL:self.audioFileURL settings:@{AVFormatIDKey: @(kAudioFormatMPEG4AAC),
-                                                                                     AVNumberOfChannelsKey: @(2),
-                                                                                     AVSampleRateKey: @(44100)} error:&err];
+    self.recorder = [[AVAudioRecorder alloc]initWithURL:self.audioFileURL settings:@{AVFormatIDKey: @(kAudioFormatMPEG4AAC),AVNumberOfChannelsKey: @(2), AVSampleRateKey: @(44100)} error:&err];
     
     if (err != nil){
         NSLog(@"Error creating recorder: %@", err.localizedDescription);
@@ -52,9 +50,6 @@
     }
     [self.recorder record];
 }
-
-
-
 
 
 
@@ -89,40 +84,25 @@
 
 }
 
-
-
 //responsible for playing the recording of the user as the user taps the picture.
-- (IBAction)playAudioTap:(UITapGestureRecognizer *)sender {
+- (IBAction)playAudioTap:(id)sender {
+    if ([self.player isPlaying]) {
+        [self.player stop];
+        return;
+    }
     
+    NSError *err = nil;
+    self.player = [[AVAudioPlayer alloc]
+                   initWithContentsOfURL:self.audioFileURL
+                   error:&err];
+    if (err != nil) {
+        NSLog(@"Error creating player: %@", err.localizedDescription);
+        abort();
+    }
     
+    [self.player play];
 }
 
-
-/*
- - (IBAction)togglePlay:(UIButton *)sender {
- if ([self.player isPlaying]) {
- [self.player stop];
- [sender setTitle:@"Play" forState:UIControlStateNormal];
- return;
- }
- [sender setTitle:@"Stop" forState:UIControlStateNormal];
- 
- NSError *err = nil;
- self.player = [[AVAudioPlayer alloc]
- initWithContentsOfURL:self.audioFileURL
- error:&err];
- if (err != nil) {
- NSLog(@"Error creating player: %@", err.localizedDescription);
- abort();
- }
- 
- [self.player play];
- }
- 
- 
- 
- 
- */
 
 
 
