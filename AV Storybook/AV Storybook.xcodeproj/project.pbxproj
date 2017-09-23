@@ -14,6 +14,7 @@
 		DA0E63F21F7577F700DDBD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0E63F01F7577F700DDBD2D /* LaunchScreen.storyboard */; };
 		DA0E63FE1F759E5D00DDBD2D /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0E63FD1F759E5D00DDBD2D /* Page.m */; };
 		DA0E64041F75A79C00DDBD2D /* StoryPartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0E64031F75A79C00DDBD2D /* StoryPartViewController.m */; };
+		DAC7B67B1F770A650068B045 /* HandlePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC7B67A1F770A650068B045 /* HandlePageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		DA0E63FD1F759E5D00DDBD2D /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
 		DA0E64021F75A79C00DDBD2D /* StoryPartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPartViewController.h; sourceTree = "<group>"; };
 		DA0E64031F75A79C00DDBD2D /* StoryPartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPartViewController.m; sourceTree = "<group>"; };
+		DAC7B6791F770A650068B045 /* HandlePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandlePageViewController.h; sourceTree = "<group>"; };
+		DAC7B67A1F770A650068B045 /* HandlePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandlePageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 			children = (
 				DA0E64021F75A79C00DDBD2D /* StoryPartViewController.h */,
 				DA0E64031F75A79C00DDBD2D /* StoryPartViewController.m */,
+				DAC7B6791F770A650068B045 /* HandlePageViewController.h */,
+				DAC7B67A1F770A650068B045 /* HandlePageViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				DA0E63E71F7577F700DDBD2D /* AppDelegate.m in Sources */,
 				DA0E63FE1F759E5D00DDBD2D /* Page.m in Sources */,
 				DA0E63E41F7577F700DDBD2D /* main.m in Sources */,
+				DAC7B67B1F770A650068B045 /* HandlePageViewController.m in Sources */,
 				DA0E64041F75A79C00DDBD2D /* StoryPartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
